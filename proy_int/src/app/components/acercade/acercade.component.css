@@ -1,0 +1,19 @@
+/* Se agrega color a la barra inferior (todos los div) */
+.row{
+    padding: 20px;
+}
+
+/* Agrego colores al div entero*/
+div{
+    background-color: #171718;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+/**/
+
+/* Nombre */
+#nombre{
+    font-weight: bold; /*negrita*/
+    margin-top: 30%;
+}
+
