@@ -9,8 +9,28 @@ div{
     text-align: center;
     color: rgb(255, 255, 255);
 }
-/**/
-
+/* A partir de 576 lo configuro*/
+@media (min-width: 576px) {
+    #fotoperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        /* box-shadow: 3px 3px 3px grey; */ 
+        left: 3%;
+        top: 640px;
+    }
+}
+/* De 0 a 575 configuro */
+@media (max-width: 575px) {
+    #fotoperfil{
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        /* box-shadow: 3px 3px 3px grey; */ 
+        left: 35%;
+        top: 640px;
+    }
+}
 /* Nombre */
 #nombre{
     font-weight: bold; /*negrita*/
