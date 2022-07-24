@@ -12,7 +12,7 @@
     display: inline-block; /* que la parte 1 y parte 2 esten en mismo bloque */
     text-align: justify;
 }
-
+/* Le agrego sombra a la imagen */
 .img-proyecto{
     box-shadow: 10px 10px 5px #000000;/* 
     box-shadow: ejex ejey difumasion color */
