@@ -1,4 +1,4 @@
-package com.proyectointegrador.fc;
+package com.portafolio.fc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

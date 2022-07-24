@@ -8,11 +8,11 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.proyectointegrador</groupId>
+	<groupId>com.portafolio</groupId>
 	<artifactId>fc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fc</name>
-	<description>Portafolio de FC</description>
+	<description>Proyecto Integrador de FC</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
