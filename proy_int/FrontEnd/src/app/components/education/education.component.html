@@ -1,32 +1,31 @@
-<!-- Creamos la lista de educación -->
 <div class="row">
-    <h1>Formación académica</h1>
+    <h1>Educacion</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged"> 
-            Nueva Educación
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar Educacion
         </button>
     </div>
 
-    <div class="col-lg-1"></div>
+    <div class="col lg 1"></div>
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-                <tr *ngFor="let Educacion of edu">
+                <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h5>{{Educacion.nombreEd}}</h5>
+                        <h5>{{Educacion.nombreE}}</h5>
                     </td>
-                    <td>{{Educacion.descripcionEd}}</td>
+                    <td><h6>{{Educacion.descripcionE}}</h6></td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-primary" routerLink="/editedu/{{Educacion.id}}">
-                        <i class="bi bi-pencil-square"></i> Editar</button>
+                            <i class="bi bi-pencil-square"></i> Editar</button>
                     </td>
-                        
                     <td *ngIf="isLogged">
                         <button class="btn btn-primary" (click)="delete(Educacion.id)">
-                        <i class="bi bi-trash"></i> Borrar</button>
+                            <i class="bi bi-trash"></i> Borrar</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
 </div>

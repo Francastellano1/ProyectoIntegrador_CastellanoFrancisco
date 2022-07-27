@@ -8,24 +8,25 @@ import { SEducacionService } from 'src/app/service/s-educacion.service';
   templateUrl: './new-educacion.component.html',
   styleUrls: ['./new-educacion.component.css']
 })
-export class NewEducacionComponent implements OnInit {nombreEd: string = '';
-descripcionEd: string = '';
+export class NewEducacionComponent implements OnInit {nombreE: string;
+  descripcionE: string;
 
-constructor(private sEducacion: SEducacionService, private router: Router) { }
+  constructor(private sEducacion: SEducacionService, private router: Router) { }
 
-ngOnInit(): void {
-}
+  ngOnInit(): void {
+  }
 
-onCreate(): void {
-  const edu = new Educacion(this.nombreEd, this.descripcionEd);
-  this.sEducacion.save(edu).subscribe(
-    data => {
-      alert("Educacion añadida");
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló");
-      this.router.navigate(['']);
-    }
-  )
-}
+  onCreate(): void{
+    const educacion = new Educacion(this.nombreE, this.descripcionE);
+    this.sEducacion.save(educacion).subscribe(
+      data =>{
+        alert("Educacion añadida correctamente");
+        this.router.navigate(['']);
+      }, err =>{
+        alert("falló");
+        this.router.navigate(['']);
+      }
+    )
+  }
+
 }

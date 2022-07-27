@@ -6,27 +6,28 @@ import { Educacion } from '../model/educacion';
 @Injectable({
   providedIn: 'root'
 })
-export class SEducacionService {expURL = 'http://localhost:8080/edu/';
+export class SEducacionService {
+  URL = 'http://localhost:8080/educacion/';
 
-constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 
-public lista(): Observable<Educacion[]>{
-  return this.httpClient.get<Educacion[]>(this.expURL + 'lista');
-}
+  public lista(): Observable<Educacion[]>{
+    return this.httpClient.get<Educacion[]>(this.URL + 'lista');
+  }
 
-public detail(id: number): Observable<Educacion>{
-  return this.httpClient.get<Educacion>(this.expURL + `detail/${id}`);
-} 
+  public detail(id: number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
+  }
 
-public save(educacion: Educacion): Observable<any>{
-  return this.httpClient.post<any>(this.expURL + 'create', educacion);
-}
+  public save(educacion: Educacion): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', educacion);
+  }
 
-public update(id: number, educacion: Educacion): Observable<any>{
-  return this.httpClient.put<any>(this.expURL + `update/${id}`, educacion);
-}
+  public update(id: number, educacion: Educacion): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
+  }
 
-public delete(id: number): Observable<any>{
-  return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
-}
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  }
 }

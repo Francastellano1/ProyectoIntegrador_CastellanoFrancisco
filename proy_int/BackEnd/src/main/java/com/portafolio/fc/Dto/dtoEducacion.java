@@ -2,43 +2,35 @@ package com.portafolio.fc.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- *
- * @author Fran
- */
-
-
 public class dtoEducacion {
     @NotBlank
-    private String nombreEd;
+    private String nombreE;
     @NotBlank
-    private String descripcionEd;
-    
-    //Constructor
+    private String descripcionE;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreEd, String descripcionEd) {
-        this.nombreEd = nombreEd;
-        this.descripcionEd = descripcionEd;
+    public dtoEducacion(String nombreE, String descripcionE) {
+        this.nombreE = nombreE;
+        this.descripcionE = descripcionE;
+    }
+
+    public String getNombreE() {
+        return nombreE;
+    }
+
+    public void setNombreE(String nombreE) {
+        this.nombreE = nombreE;
+    }
+
+    public String getDescripcionE() {
+        return descripcionE;
+    }
+
+    public void setDescripcionE(String descripcionE) {
+        this.descripcionE = descripcionE;
     }
     
-    //Getters && Setters
-
-    public String getNombreEd() {
-        return nombreEd;
-    }
-
-    public void setNombreEd(String nombreEd) {
-        this.nombreEd = nombreEd;
-    }
-
-    public String getDescripcionEd() {
-        return descripcionEd;
-    }
-
-    public void setDescripcionEd(String descripcionEd) {
-        this.descripcionEd = descripcionEd;
-    }
+    
 }

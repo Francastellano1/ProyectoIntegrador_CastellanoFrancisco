@@ -12,6 +12,6 @@ div{
     background: #5874fc;
 }
 /* h1 y h3 en el mismo renglon */
-h1, h3{
+h1, h5, p, button{
     display: inline;
 }
