@@ -11,33 +11,25 @@ import javax.validation.constraints.NotBlank;
  * @author Fran
  */
 public class dtoProyecto {
+
     private String img;
     @NotBlank
     private String nombreP;
     @NotBlank
     private String descripcionP;
-    
-    //Constructores
 
+    //Constructores
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String img, String nombreP, String descripcionP) {
-        this.img = img;
+    public dtoProyecto(String nombreP, String descripcionP, String img) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-    }
-    
-    //Getters && Setters
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
         this.img = img;
+
     }
 
+    //Getters && Setters
     public String getNombreP() {
         return nombreP;
     }
@@ -53,5 +45,12 @@ public class dtoProyecto {
     public void setDescripcionP(String descripcionP) {
         this.descripcionP = descripcionP;
     }
-    
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 }

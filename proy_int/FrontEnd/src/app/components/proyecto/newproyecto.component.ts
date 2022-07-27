@@ -10,16 +10,16 @@ import { SProyectoService } from 'src/app/service/s-proyecto.service';
 })
 export class NewproyectoComponent implements OnInit {
 
-    img!: string;
     nombreP!: string;
     descripcionP!: string;
+    img!: string;
 
   constructor(private sProyecto: SProyectoService, private router: Router) { }
 
   ngOnInit(): void {}
 
   onCreate(): void {
-    const pro = new Proyecto(this.img, this.nombreP, this.descripcionP);
+    const pro = new Proyecto(this.nombreP, this.descripcionP, this.img);
     console.log(Proyecto);
     this.sProyecto.save(pro).subscribe(data=>{
       alert("Se agrego un nuevo proyecto correctamente");

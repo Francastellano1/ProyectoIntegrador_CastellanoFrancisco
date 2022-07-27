@@ -50,10 +50,12 @@ public class CProyecto {
     public ResponseEntity<?> create(@RequestBody dtoProyecto dtopro){
         if(StringUtils.isBlank(dtopro.getNombreP()))
             return new ResponseEntity(new Mensaje("El nombre del proyecto es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sProyecto.existsByNombreP(dtopro.getNombreP()))
+        if(sProyecto.existsByNombreP(dtopro.getNombreP())){
             return new ResponseEntity(new Mensaje("El proyecto ingresado ya existe"), HttpStatus.BAD_REQUEST);
-        Proyecto proyecto = new Proyecto(dtopro.getImg(), dtopro.getNombreP(),
-                                      dtopro.getDescripcionP());
+        }
+        
+        Proyecto proyecto = new Proyecto(
+                dtopro.getNombreP(), dtopro.getDescripcionP(),dtopro.getImg());
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Nuevo proyecto agregado correctamente"), HttpStatus.OK);
         
