@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("edulab")
+@RequestMapping("edu")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
 
@@ -53,13 +53,13 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (sEducacion.existsByNombreEd(dtoedu.getNombreEd())) {
-            return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Esa educación existe"), HttpStatus.BAD_REQUEST);
         }
 
         Educacion educacion = new Educacion(dtoedu.getNombreEd(), dtoedu.getDescripcionEd());
         sEducacion.save(educacion);
 
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación agregada"), HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")
@@ -68,9 +68,9 @@ public class CEducacion {
         if (!sEducacion.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         }
-        //Compara nombre de experiencias
+        //Compara nombre de educaciones
         if (sEducacion.existsByNombreEd(dtoedu.getNombreEd()) && sEducacion.getByNombreEd(dtoedu.getNombreEd()).get().getId() != id) {
-            return new ResponseEntity(new Mensaje("Esta experiencia laboral ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Esta educación ya existe"), HttpStatus.BAD_REQUEST);
         }
         //No puede estar vacio
         if (StringUtils.isBlank(dtoedu.getNombreEd())) {
@@ -82,7 +82,7 @@ public class CEducacion {
         educacion.setDescripcionEd((dtoedu.getDescripcionEd()));
 
         sEducacion.save(educacion);
-        return new ResponseEntity(new Mensaje("Experiencia laboral actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación actualizada"), HttpStatus.OK);
     }
     
     @DeleteMapping("/delete/{id}")
@@ -93,7 +93,7 @@ public class CEducacion {
         }    
             sEducacion.delete(id);
             
-            return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
+            return new ResponseEntity(new Mensaje("Educación eliminada"), HttpStatus.OK);
         
     }
 }
