@@ -1,6 +1,13 @@
 .row{
     padding: 20px;
 }
+
+.btn-dark{
+    margin-top:2em;
+}
+.btn-primary{
+    background-color: #212529;
+}
 div{
     background: #5874fc;
 }
