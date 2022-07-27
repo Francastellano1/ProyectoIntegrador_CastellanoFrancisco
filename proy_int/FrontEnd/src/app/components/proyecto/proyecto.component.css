@@ -3,7 +3,15 @@
     background-color: #5874fc;
     
 }
-
+.btn-dark{
+    margin-top:2em;
+}
+.btn-primary{
+    background-color: #212529;
+}
+div{
+    background: #5874fc;
+}
 .contenedor{
     width: auto;
 }
