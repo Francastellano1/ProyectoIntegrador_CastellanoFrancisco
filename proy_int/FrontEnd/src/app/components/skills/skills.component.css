@@ -15,3 +15,7 @@ div{
 h1, h5, p, button{
     display: inline;
 }
+.circle-progress-tspan {
+    stroke-width:10px;
+    stroke:#000000;
+}

@@ -53,7 +53,9 @@ import { EditSkillsComponent } from './components/skills/edit-skills.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgCircleProgressModule.forRoot({}),
+    NgCircleProgressModule.forRoot({
+      "radius": 100
+    }),
     HttpClientModule   
   ],
   providers: [
