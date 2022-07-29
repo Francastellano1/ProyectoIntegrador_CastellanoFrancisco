@@ -1,1 +1,26 @@
-<p>edit-skills works!</p>
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreS">Habilidad</label>
+                    <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="ski.nombreS" required>
+                </div>
+  
+                <div class="form-group">
+                    <label for="progress">Porcentaje alcanzado</label>
+                    <input type="text" class="form-control" id="progress" name="progress" [(ngModel)]="ski.progress" required>
+                </div>
+  
+                <div class="form-group">
+                    <label for="imgSkill">Imagen del proyecto</label>
+                    <input type="text" class="form-control" id="imgSkill" name="imgSkill" [(ngModel)]="ski.imgSkill" required>
+                </div>
+  
+                <button class="btn btn-primary">
+                    Actualizar habilidad
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
