@@ -26,7 +26,7 @@ public class CSkill {
     @Autowired
     SSkill sSkill;
     
-    @GetMapping ("/list")
+    @GetMapping ("/lista")
     public ResponseEntity <List<Skill>> list(){
         List<Skill> list = sSkill.list();
         return new ResponseEntity (list, HttpStatus.OK);
